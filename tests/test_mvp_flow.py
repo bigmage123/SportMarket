@@ -1,5 +1,4 @@
-"""Сквозной сценарий MVP: продавец проходит верификацию и создаёт товар,
-покупатель находит его, оформляет и оплачивает заказ, получает и оценивает."""
+##Сценарий MVP: продавец проходит верификацию и создаёт товар, покупатель находит его, оформляет и оплачивает заказ, получает и оценивает
 
 import os
 import tempfile
@@ -10,11 +9,11 @@ os.environ["DATABASE_URL"] = f"sqlite:///{Path(_tmp) / 'test.db'}"
 os.environ["STORAGE_DIR"] = str(Path(_tmp) / "storage")
 os.environ["SEED_DEMO_DATA"] = "false"
 
-import pytest  # noqa: E402
-from fastapi.testclient import TestClient  # noqa: E402
+import pytest 
+from fastapi.testclient import TestClient
 
-from config import settings  # noqa: E402
-from main import app  # noqa: E402
+from config import settings
+from main import app
 
 
 @pytest.fixture(scope="module")
