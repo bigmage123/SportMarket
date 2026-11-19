@@ -45,7 +45,7 @@ uvicorn main:app --reload
 |---|---|---|
 | PostgreSQL | SQLite | `pip install "psycopg[binary]"`, `DATABASE_URL=postgresql+psycopg://...` |
 | MinIO | папка `storage/` (`services.FileStorage`) | заменить `FileStorage` клиентом MinIO с тем же интерфейсом |
-| ЮKassa | тестовая страница оплаты + webhook с HMAC-подписью | реализовать `create_payment` через SDK ЮKassa |
+| ЮKassa | тестовая страница оплаты | реализовать `create_payment` через SDK ЮKassa |
 | Resend | письма пишутся в лог | задать `RESEND_API_KEY` |
 | Celery + Redis | `BackgroundTasks` FastAPI | вынести `_order_confirmation_email` в задачу Celery |
 | FastAPI Users | собственный JWT (`security.py`) | — |
