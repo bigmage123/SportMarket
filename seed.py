@@ -101,7 +101,7 @@ def _steps(raw: list[str]) -> list[InstructionStep]:
 
 
 def _placeholder(product_key: str, title: str, color: str) -> str:
-    object_key = f"{PUBLIC_MEDIA_PREFIX}/products/demo/{product_key}.jpg"
+    object_key = f"{PUBLIC_MEDIA_PREFIX}/products/demo/{product_key}.svg"
     path = storage.path(object_key)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(SVG.format(bg=color, title=title), encoding="utf-8")
