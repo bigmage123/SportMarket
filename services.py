@@ -1,5 +1,4 @@
 """Внешние сервисы из архитектуры ПР-03 в упрощённом для MVP виде.
-
 - FileStorage — локальная замена MinIO (тот же интерфейс put/open/delete по object_key).
 - PaymentGateway — тестовая заглушка ЮKassa: ссылка на оплату + подписанный webhook.
 - EmailSender — Resend, если задан RESEND_API_KEY, иначе вывод письма в лог.
