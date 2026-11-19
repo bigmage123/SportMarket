@@ -49,7 +49,7 @@ uvicorn main:app --reload
 | Resend | письма пишутся в лог | задать `RESEND_API_KEY` |
 | Celery + Redis | `BackgroundTasks` FastAPI | вынести `_order_confirmation_email` в задачу Celery |
 | FastAPI Users | собственный JWT (`security.py`) | — |
-| React + сборка | React через CDN, без Node.js | перенести `frontend/app.js` в Vite-проект |
+| React + сборка | React через CDN, без Node.js | — |
 
 Изменения модели данных относительно ER-диаграммы: у заказа есть позиции `OrderItem` и ссылка на
 пользователя (у пользователя одна корзина, но много заказов); у отзыва есть `product_id`; у товара
